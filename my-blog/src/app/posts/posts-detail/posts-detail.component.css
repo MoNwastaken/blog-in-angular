@@ -148,3 +148,12 @@ a {
   padding: 2%;
   max-width: 100%;
 }
+
+@media only screen and (max-width: 564px) {
+  .blog-comment img.avatar {
+    display: none;
+  }
+  .blog-comment .post-comments {
+    margin-left: 0px;
+  }
+}
