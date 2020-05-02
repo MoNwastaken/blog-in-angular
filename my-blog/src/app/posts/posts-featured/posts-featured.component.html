@@ -4,7 +4,7 @@
       <div class="col-md-12 col-lg-6"><img
         src="https://raw.githubusercontent.com/MoNwastaken/test-repo/master/placeholder-image.jpg"
         alt="{{ posts[0].title }}" class="featured-image link" [routerLink]="[posts[0].id]">
-        <p [routerLink]="[posts[0].id]" class="featured-title link">{{ posts[0].id }}{{ posts[0].title }}</p>
+        <p [routerLink]="[posts[0].id]" class="featured-title link">{{ posts[0].title }}</p>
         <p class="featured-description">{{ posts[0].body }}.</p></div>
       <div class="col-md-12 col-lg-6">
         <div class="row">
@@ -12,13 +12,13 @@
             src="https://raw.githubusercontent.com/MoNwastaken/test-repo/master/placeholder-image.jpg"
             alt="{{ posts[1].title }}"
             class="featured-image link" [routerLink]="[posts[1].id]">
-            <p class="featured-title-sub link" [routerLink]="[posts[1].id]">{{ posts[1].id }}{{ posts[1].title }}</p>
+            <p class="featured-title-sub link" [routerLink]="[posts[1].id]">{{ posts[1].title }}</p>
             <p class="featured-description">{{ posts[1].body.slice(0, 200) + '...' }}</p></div>
           <div class="col-6 featured-image-small"><img
             src="https://raw.githubusercontent.com/MoNwastaken/test-repo/master/placeholder-image.jpg"
             alt="{{ posts[1].title }}"
             class="featured-image link" [routerLink]="[posts[2].id]">
-            <p class="featured-title-sub link" [routerLink]="[posts[2].id]">{{ posts[2].id }}{{ posts[2].title }}</p>
+            <p class="featured-title-sub link" [routerLink]="[posts[2].id]">{{ posts[2].title }}</p>
             <p class="featured-description">{{ posts[2].body.slice(0, 200) + '...' }}</p></div>
         </div>
         <div class="row">
@@ -26,16 +26,29 @@
             src="https://raw.githubusercontent.com/MoNwastaken/test-repo/master/placeholder-image.jpg"
             alt="{{ posts[3].title }}"
             class="featured-image link" [routerLink]="[posts[3].id]">
-            <p class="featured-title-sub link" [routerLink]="[posts[3].id]">{{ posts[3].id }}{{ posts[3].title }}</p>
+            <p class="featured-title-sub link" [routerLink]="[posts[3].id]">{{ posts[3].title }}</p>
             <p class="featured-description">{{ posts[3].body.slice(0, 200) + '...' }}</p></div>
           <div class="col-6 featured-image-small"><img
             src="https://raw.githubusercontent.com/MoNwastaken/test-repo/master/placeholder-image.jpg"
             alt="{{ posts[4].title }}"
             class="featured-image link" [routerLink]="[posts[4].id]">
-            <p class="featured-title-sub link" [routerLink]="[posts[4].id]">{{ posts[4].id }}{{ posts[4].title }}</p>
+            <p class="featured-title-sub link" [routerLink]="[posts[4].id]">{{ posts[4].title }}</p>
             <p class="featured-description">{{ posts[4].body.slice(0, 200) + '...' }}</p></div>
         </div>
       </div>
     </div>
+    <div class="row category-line-box">
+      <p class="category-title">News</p>
+      <hr>
+
+        <div class="col-md-4 col-lg-3" *ngFor="let posts of posts; let i = index">
+          <div *ngIf="i < 8">
+            <img [routerLink]="[posts.id]" src="https://raw.githubusercontent.com/MoNwastaken/test-repo/master/placeholder-image.jpg" alt=""
+                 class="featured-image">
+            <p class="featured-title-sub">{{posts.title}}</p>
+            <p class="featured-description">{{posts.body}}</p></div>
+        </div>
+      </div>
   </div>
 </div>
+

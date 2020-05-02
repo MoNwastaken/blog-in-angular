@@ -62,3 +62,12 @@ bg-white {
 .link:focus {
   outline:0;
 }
+
+.category-title {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.category-line-box {
+  margin-bottom: 3%;
+}
