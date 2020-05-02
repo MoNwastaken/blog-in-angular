@@ -14,6 +14,7 @@ export class PostsDetailComponent implements OnInit {
   post: Post;
   id: number;
   postUrl: string;
+  loading: boolean = false;
 
   constructor(private postsFeaturedComponent:PostsFeaturedComponent, private route: ActivatedRoute, private http: HttpClient) {
   }
@@ -28,6 +29,7 @@ export class PostsDetailComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
   }
   setPosts(posts: Post[]) {
+    this.loading = true;
     this.posts = posts;
     this.post = posts[this.id-1];
     /////// Handling comments
@@ -37,8 +39,10 @@ export class PostsDetailComponent implements OnInit {
     this.postUrl += '/comments';
     /////////// Getting comments
     this.http.get<any>(this.postUrl).subscribe(dataComments => {
+      this.loading = false;
       this.setComments(dataComments)
     });
+
   }
 
   setComments(comments: Comments[]) {

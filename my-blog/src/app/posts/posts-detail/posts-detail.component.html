@@ -8,9 +8,13 @@
     <div class="description">
       {{post.body}}
     </div>
+    <div *ngIf="loading">
+    <app-loading-spinner ></app-loading-spinner>Loading comments. Please wait </div>
+    <div *ngIf="!loading">
     <div class="comment" *ngFor="let comments of comments; let i = index">
       <div class="commenter-name-box"><span class="commenter-name">{{comments.name}}</span></div>
       <div class="commenter-comment">{{comments.body}}</div>
+    </div>
     </div>
   </div>
 </div>
