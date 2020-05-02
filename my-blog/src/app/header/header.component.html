@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a routerLink="/" class="navbar-brand">My Awesome Blog</a>
+      <a (click)="isShown = false" routerLink="/" class="navbar-brand">My Awesome Blog</a>
     </div>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburger" (click)="isShown = !isShown">
       <span class="navbar-toggler-icon"></span>
