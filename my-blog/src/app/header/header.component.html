@@ -3,28 +3,13 @@
     <div class="navbar-header">
       <a routerLink="/" class="navbar-brand">My Awesome Blog</a>
     </div>
-    <button class="navbar-toggler" data-toggle="collapse" data-target="#mobile-dropdown">
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#hamburger" (click)="isShown = !isShown">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="mobile-dropdown">
+    <div class="collapse navbar-collapse" id="hamburger" [ngClass]="{ 'show': isShown }">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link link" routerLink="/new">Create post</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle link" data-toggle="dropdown"
-             data-target="news-dropdown">News <span class="caret"></span></a>
-          <div class="dropdown-menu" aria-labelledby="news-dropdown">
-            <a class="dropdown-item link">First type of news</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item link">Second type of news</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link">Reviews</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link link">Info</a>
+          <a (click)="isShown = false" class="nav-link link" routerLink="/new">Create post</a>
         </li>
       </ul>
     </div>
