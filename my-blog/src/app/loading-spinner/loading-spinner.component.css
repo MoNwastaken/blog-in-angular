@@ -1,4 +1,3 @@
-
 @keyframes ldio-z1gou4jet28 {
   0%, 100% {
     animation-timing-function: cubic-bezier(0.45,0,0.9,0.55)
@@ -30,7 +29,9 @@
   height: 200px;
   display: inline-block;
   overflow: hidden;
-  background-color: #eeeeee;;
+  background-color: transparent;
+  margin: auto;
+  display: block;
 }
 .ldio-z1gou4jet28 {
   width: 100%;

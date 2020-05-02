@@ -157,3 +157,8 @@ a {
     margin-left: 0px;
   }
 }
+
+.text-center {
+  margin: auto;
+  display: block;
+}

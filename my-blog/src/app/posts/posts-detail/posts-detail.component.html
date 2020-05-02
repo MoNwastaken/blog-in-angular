@@ -1,3 +1,4 @@
+<app-loading-spinner *ngIf="!dataAvailable"></app-loading-spinner>
 <div class="row" *ngIf="dataAvailable">
   <div class="col-md-12 col-lg-8 m-auto content">
     <img src="https://raw.githubusercontent.com/MoNwastaken/test-repo/master/placeholder-image.jpg" alt="" class="featured-image">
@@ -9,7 +10,7 @@
     </div>
     <div *ngIf="loading">
       <app-loading-spinner></app-loading-spinner>
-      Loading comments. Please wait
+      <span class="text-center">Loading comments. Please wait</span>
     </div>
     <div *ngIf="!loading">
       <div class="col-md-12">
