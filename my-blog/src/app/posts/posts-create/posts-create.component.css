@@ -7,6 +7,11 @@
   padding: 2%;
 }
 
+.content-row {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 @media only screen and (max-width: 992px) {
   .background {
     width: 100%;
