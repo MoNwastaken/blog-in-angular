@@ -11,11 +11,13 @@ import {HttpClientModule} from '@angular/common/http'
 import {RouterModule, Routes} from "@angular/router";
 import { PostsCreateComponent } from './posts/posts-create/posts-create.component';
 import {FormsModule} from "@angular/forms";
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 
 const appRoutes: Routes = [
   { path: '', component:PostsFeaturedComponent, pathMatch: 'full' },
   { path: 'new', component: PostsCreateComponent },
+  { path: 'loading', component: LoadingSpinnerComponent },
   { path: ':id', component: PostsDetailComponent },
 ];
 
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
     PostsFeaturedComponent,
     PostsDetailComponent,
     PostsByCategoryComponent,
-    PostsCreateComponent
+    PostsCreateComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
