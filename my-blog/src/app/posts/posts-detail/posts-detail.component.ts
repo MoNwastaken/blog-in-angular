@@ -20,6 +20,7 @@ export class PostsDetailComponent implements OnInit {
   }
   posts: Post[] = [];
   comments: Comments[] = [];
+  dataAvailable: boolean = false;
 
 
   ngOnInit() {
@@ -40,7 +41,8 @@ export class PostsDetailComponent implements OnInit {
     /////////// Getting comments
     this.http.get<any>(this.postUrl).subscribe(dataComments => {
       this.loading = false;
-      this.setComments(dataComments)
+      this.setComments(dataComments);
+      this.dataAvailable = true;
     });
 
   }

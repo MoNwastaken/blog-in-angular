@@ -13,6 +13,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class PostsFeaturedComponent implements OnInit {
   posts: Post[] = [];
+  dataAvailable: boolean = false;
 
   constructor(private http: HttpClient) {
   }
@@ -20,6 +21,7 @@ export class PostsFeaturedComponent implements OnInit {
   ngOnInit() {
     this.http.get<any>('https://jsonplaceholder.typicode.com/posts').subscribe(data => {
       this.setPosts(data);
+      this.dataAvailable = true;
     })
   }
 
