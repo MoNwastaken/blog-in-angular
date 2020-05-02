@@ -28,6 +28,7 @@ export class PostsCreateComponent implements OnInit {
       .subscribe(response => {
         console.log(response);
       });
+    form.reset();
   }
 
 }
