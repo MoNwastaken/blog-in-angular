@@ -4,3 +4,6 @@
 .link:focus {
   outline:0;
 }
+.navbar {
+  z-index: 1500;
+}
