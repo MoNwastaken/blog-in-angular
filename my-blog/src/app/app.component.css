@@ -1,0 +1,9 @@
+body {
+  background-color: #eee;
+  overflow-x: hidden;
+}
+
+.m-auto {
+  margin:auto;
+}
+

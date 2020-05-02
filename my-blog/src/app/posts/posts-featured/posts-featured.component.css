@@ -1,0 +1,64 @@
+body {
+  background-color: #eee;
+  overflow-x: hidden;
+}
+
+.featured-image {
+  width: 100%;
+  border: 2px solid black;
+  transition: filter 300ms ease-in-out;
+}
+
+.featured-box {
+  padding-top: 3%;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.featured-image-small {
+  padding-bottom: 5%;
+}
+
+.featured-title {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.featured-image:hover {
+  filter: brightness(1.05);
+  cursor: pointer;
+}
+
+.featured-title-sub {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  border-color: black;
+  margin-top: 0;
+}
+
+.category-title {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.category-line-box {
+  margin-bottom: 3%;
+}
+
+bg-white {
+  background-color: #FFFF;
+}
+
+.link {
+  cursor: pointer;
+}
+.link:focus {
+  outline:0;
+}

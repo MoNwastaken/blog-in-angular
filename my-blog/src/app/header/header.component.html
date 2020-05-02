@@ -1,27 +1,30 @@
 <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand">My Awesome Blog</a>
+      <a routerLink="/" class="navbar-brand">My Awesome Blog</a>
     </div>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#mobile-dropdown">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="mobile-dropdown">
       <ul class="navbar-nav navbar-right ml-auto">
+        <li class="nav-item">
+          <a class="nav-link link" routerLink="/new">Create post</a>
+        </li>
         <li class="nav-item dropdown">
-          <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown"
+          <a class="nav-link dropdown-toggle link" data-toggle="dropdown"
              data-target="news-dropdown">News <span class="caret"></span></a>
           <div class="dropdown-menu" aria-labelledby="news-dropdown">
-            <a href="#" class="dropdown-item">First type of news</a>
+            <a class="dropdown-item link">First type of news</a>
             <div class="dropdown-divider"></div>
-            <a href="" class="dropdown-item">Second type of news</a>
+            <a class="dropdown-item link">Second type of news</a>
           </div>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link">Reviews</a>
+          <a class="nav-link link">Reviews</a>
         </li>
         <li class="nav-item">
-          <a href="" class="nav-link">Info</a>
+          <a class="nav-link link">Info</a>
         </li>
       </ul>
     </div>

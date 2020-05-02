@@ -1,0 +1,16 @@
+
+
+<div class="row">
+  <div class="col-md-12 col-lg-8 m-auto content">
+    <div class="title">
+        <h1>{{post.title}}</h1>
+    </div>
+    <div class="description">
+      {{post.body}}
+    </div>
+    <div class="comment" *ngFor="let comments of comments; let i = index">
+      <div class="commenter-name-box"><span class="commenter-name">{{comments.name}}</span></div>
+      <div class="commenter-comment">{{comments.body}}</div>
+    </div>
+  </div>
+</div>

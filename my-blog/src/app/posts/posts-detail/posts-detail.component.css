@@ -1,0 +1,51 @@
+.content {
+  background-color: white;
+  top: 10%;
+  left: 17%;
+  position: fixed;
+}
+
+.title {
+  border-bottom: 2px black solid;
+}
+
+.comment {
+  border-top: 1px solid black;
+  padding: 1%;
+}
+
+.commenter-name {
+  border-radius: 4px;
+  background-color: lightgray;
+  padding: 0.5%;
+}
+
+.commenter-comment {
+
+}
+
+.link {
+  cursor: pointer;
+}
+.link:focus {
+  outline:0;
+}
+
+@media only screen and (max-width: 992px) {
+  .background {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1000;
+    top:0px;
+    left:0px;
+    position: fixed;
+    opacity: 0;
+  }
+  .content {
+    background-color: white;
+    left: 0;
+    height:100%;
+    width:100%;
+  }
+}
